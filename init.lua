@@ -78,11 +78,65 @@ Config.PolyZones = {
 }
 
 Config.TargetBones = {
-
+	["main"] = {
+        bones = {
+            "seat_dside_f",
+            "seat_pside_f",
+            "door_dside_f",
+            "door_pside_f",
+            "hbgrip_l",
+            "hbgrip_r"
+        },
+        options = {
+            {
+                type = "client",
+                event = "jim-mechanic:flipvehicle",
+                label = 'Flipping Vehicle',
+                icon = 'fas fa-chevron-circle-up',
+            },
+        },
+        distance = 3.0
+    },
+	["trunk"] = {
+        bones = {
+            "boot",
+        },
+        options = {
+			{
+				type = "client",
+				event = "qb-trunk:client:GetIn",
+				icon = "fas fa-user-secret",
+				label = "Get in Trunk",
+			},
+        },
+        distance = 3.0
+    },
 }
 
 Config.TargetModels = {
-
+	["trashsearch"] = {
+        models = {
+			-1096777189,
+			666561306,
+			1437508529,
+			-1426008804,
+			-228596739,
+			161465839,
+			651101403,
+			-58485588,
+			218085040,
+			-206690185,
+        },
+        options = {
+			{
+             type = "client",
+             event = "qb-smallresource:client:open:Dumpster:storage",
+             icon = "far fa-trash-alt",
+             label = "Open Bin",
+            },
+        },
+        distance = 3.0
+    },
 }
 
 Config.GlobalPedOptions = {
